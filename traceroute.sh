@@ -13,7 +13,7 @@ do
         echo "Hop #${TTL}: IP=${IP}";
     else
         echo "DONE"
-    break
+        break
     fi
     sleep 1
     TTL=$((TTL + 1))
