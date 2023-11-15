@@ -3,7 +3,7 @@
 TTL=1
 while true;
 do
-    RESPONSE=$(ping -c 1 -t "${TTL}" google.com)
+    RESPONSE=$(ping -c 1 -t "${TTL}" "${1}")
     IP=$(
         echo "${RESPONSE}" | 
         grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}) icmp_seq' | 
